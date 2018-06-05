@@ -74,4 +74,4 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 # Use ActiveRecord Sessions
 
-gem 'activerecord-session_store'
+
