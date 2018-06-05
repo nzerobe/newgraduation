@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
+<div class="col-sm-8 text-left"> 
    
- <div class="row">
- <div class="col-sm-12" style="background-color:lightgray;">
  <% user = current_user %>
   
    <%= link_to "Edit My Account", edit_user_path %>
@@ -15,8 +11,7 @@
 
 <p>email address: <%= @user.email %></p>
 
-</div>
-   <div class="col-sm-12" style="background-color:lavenderblush;">
+
 <h1>Most Favorited News</h1>
 <div class="table-responsive">
 <table class="table">
@@ -54,9 +49,7 @@
 </div>
   </div>
     
-</body>
-</html>    
-    
+
 
     
 

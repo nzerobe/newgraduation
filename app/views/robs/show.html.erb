@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-
- <div class="row">
-   <div class="col-sm-12" style="background-color:lavender;">
-   
+<div class="col-sm-8 text-left"> 
   
+      
        <h2>Contents Details </h2>
            
 <% unless @robs.user_id == current_user.id %>
@@ -26,7 +21,7 @@
   <p>
   
   <strong>Image:</strong>
-  <%= image_tag @robs.image_url, style:'width:250px;height:250px;' %>
+  <%= image_tag @robs.image_url, style:'width:300px;height:300px;' %>
   
 </p>
   
@@ -45,7 +40,3 @@
   
   
 </div>
-</div>
-</body>
-</html>    
-    

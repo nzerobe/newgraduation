@@ -2,7 +2,7 @@
   "name": "blog",
   "private": true,
   "dependencies": {
-    "bootstrap": "4",
+    "bootstrap": "3",
     "jquery": "^3.3.1"
   }
 }

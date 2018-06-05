@@ -10,9 +10,6 @@ class Rob < ApplicationRecord
     has_many :favorite_users, through: :favorites, source: :user
     has_many :comments, dependent: :destroy
     mount_uploader :image, ImageUploader
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     # def self.search(search)
     # where("title LIKE ? OR content LIKE ?", "%#{search}%", "%#{search}%") 
     # end
@@ -23,8 +20,5 @@ class Rob < ApplicationRecord
     all
     end
     end
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
      
 end

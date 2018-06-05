@@ -1,359 +1,52 @@
-<body>
-<html>
-
-<style>
-    
-    html
-{ height: 100%;}
-
-*
-{ margin: 0;
-  padding: 0;}
-
-/*body*/
-/*{ font: normal .80em 'trebuchet ms', arial, sans-serif;*/
-/*  background: #FFF;*/
-/*  color: #555;}*/
-
-p
-{ padding: 0 0 20px 0;
-  line-height: 1.7em;}
-
-img
-{ border: 0;}
-
-h1, h2, h3, h4, h5, h6 
-{ color: #362C20;
-  letter-spacing: 0em;
-  padding: 0 0 5px 0;}
-
-h1, h2, h3
-{ font: normal 170% 'century gothic', arial;
-  margin: 0 0 15px 0;
-  padding: 15px 0 5px 0;
-  color: #000;}
-
-h2
-{ font-size: 160%;
-  padding: 9px 0 5px 0;
-  color: #009FBC;}
-
-h3
-{ font-size: 140%;
-  padding: 5px 0 0 0;}
-
-h4, h6
-{ color: #009FBC;
-  padding: 0 0 5px 0;
-  font: normal 110% arial;
-  text-transform: uppercase;}
-
-h5, h6
-{ color: #888;
-  font: normal 95% arial;
-  letter-spacing: normal;
-  padding: 0 0 15px 0;}
-
-/*a, a:hover*/
-/*{ outline: none;*/
-/*font-family: monospace;*/
-/*font-size: 1.5rem;*/
-/*  text-decoration: underline;*/
-/*  color: #AEB002;}*/
-
-/*a:hover*/
-/*{ text-decoration: none;}*/
-
-blockquote
-{ margin: 20px 0; 
-  padding: 10px 20px 0 20px;
-  border: 1px solid #E5E5DB;
-  background: #FFF;}
-
-ul
-{ margin: 2px 0 22px 17px;}
-
-ul li
-{ list-style-type: circle;
-  margin: 0 0 6px 0; 
-  padding: 0 0 4px 5px;
-  line-height: 1.5em;}
-
-ol
-{ margin: 8px 0 22px 20px;}
-
-ol li
-{ margin: 0 0 11px 0;}
 
 
-#menubar
-{ width: 880px;
-  height: 46px;} 
+ <div class="col-sm-8 text-left"> 
+   
 
-ul#menu
-{ float: right;
-  margin: 0;}
-
-ul#menu li
-{ float: left;
-  padding: 0 0 0 9px;
-  list-style: none;
-  margin: 1px 2px 0 0;
-  background: #5A5A5A url(tab.png) no-repeat 0 0;}
-
-ul#menu li a
-{ font: normal 100% 'trebuchet ms', sans-serif;
-  display: block; 
-  float: left; 
-  height: 20px;
-  padding: 6px 35px 5px 28px;
-  text-align: center;
-  color: #FFF;
-  text-decoration: none;
-  background: #5A5A5A url(tab.png) no-repeat 100% 0;} 
-
-ul#menu li.selected a
-{ height: 20px;
-  padding: 6px 35px 5px 28px;}
-
-ul#menu li.selected
-{ margin: 1px 2px 0 0;
-  background: #00C6F0 url(tab_selected.png) no-repeat 0 0;}
-
-ul#menu li.selected a, ul#menu li.selected a:hover
-{ background: #00C6F0 url(tab_selected.png) no-repeat 100% 0;
-  color: #FFF;}
-
-ul#menu li a:hover
-{ color: #E4EC04;}
-
-#site_content
-{ width: 880px;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  padding: 0 0 10px 0;} 
-
-#sidebar_container
-{ float: right;
-  width: 224px;}
-
-.sidebar_top
-{ width: 222px;
-  height: 14px;
-  background: transparent url(side_top.png) no-repeat;}
-
-.sidebar_base
-{ width: 222px;
-  height: 14px;
-  background: url(side_base.png) no-repeat;}
-
-.sidebar
-{ float: right;
-  width: 222px;
-  padding: 0;
-  margin: 0 0 16px 0;}
-
-.sidebar_item
-{ background: url(side_back.png) repeat-y;
-  padding: 0 15px;
-  width: 192px;}
-
-.sidebar li a.selected
-{ color: #444;} 
-
-.sidebar ul
-{ margin: 0;} 
-
-/*#content*/
-/*{ text-align: left;*/
-/*  width: 620px;*/
-/*  padding: 0 0 0 5px;*/
-/*  float: left;}*/
-  
-#content ul
-{ margin: 2px 0 22px 0px;}
-
-#content ul li, .sidebar ul li
-{ list-style-type: none;
-  background: url(bullet.png) no-repeat;
-  margin: 0 0 0 0; 
-  padding: 0 0 4px 25px;
-  line-height: 1.5em;}
-
-/*#footer*/
-/*{ width: 100%;*/
-/*  font-family: 'trebuchet ms', sans-serif;*/
-/*  font-size: 100%;*/
-/*  height: 80px;*/
-/*  padding: 28px 0 5px 0;*/
-/*  text-align: center; */
-/*  background: #3B3939 url(footer.png) repeat-x;*/
-/*  color: #A8AA94;}*/
-
-/*#footer p*/
-/*{ line-height: 1.7em;*/
-/*  padding: 0 0 10px 0;}*/
-
-/*#footer a*/
-/*{ color: #A8AA94;*/
-/*  text-decoration: none;}*/
-
-/*#footer a:hover*/
-/*{ color: #FFF;*/
-/*  text-decoration: none;}*/
-
-.search
-{ color: #5D5D5D; 
-  border: 1px solid #BBB; 
-  width: 134px; 
-  padding: 4px; 
-  font: 100% arial, sans-serif;}
-
-.form_settings
-{ margin: 15px 0 0 0;}
-
-.form_settings p
-{ padding: 0 0 4px 0;}
-
-.form_settings span
-{ float: left; 
-  width: 200px; 
-  text-align: left;}
-  
-.form_settings input, .form_settings textarea
-{ padding: 5px; 
-  width: 299px; 
-  font: 100% arial; 
-  border: 1px solid #E5E5DB; 
-  background: #FFF; 
-  color: #47433F;}
-  
-.form_settings .submit
-{ font: 100% arial; 
-  border: 0; 
-  width: 99px; 
-  margin: 0 0 0 212px; 
-  height: 33px;
-  padding: 2px 0 3px 0;
-  cursor: pointer; 
-  background: #3B3B3B; 
-  color: #FFF;}
-
-.form_settings textarea, .form_settings select
-{ font: 100% arial; 
-  width: 299px;}
-
-.form_settings select
-{ width: 310px;}
-
-.form_settings .checkbox
-{ margin: 4px 0; 
-  padding: 0; 
-  width: 14px;
-  border: 0;
-  background: none;}
-
-.separator
-{ width: 100%;
-  height: 0;
-  border-top: 1px solid #D9D5CF;
-  border-bottom: 1px solid #FFF;
-  margin: 0 0 20px 0;}
-  
-table
-{ margin: 10px 0 30px 0;}
-#banner
-{  background: transparent url(banner.jpg) no-repeat;
-  width: 860px;
-  height: 180px;
-  margin-bottom: 20px;
-  /*border: 10px solid #DDD;}*/
-
-/*table tr th, table tr td*/
-/*{ background: #3B3B3B;*/
-/*  color: #FFF;*/
-/*  padding: 7px 4px;*/
-/*  text-align: left;}*/
-  
-/*table tr td*/
-/*{ background: #E5E5DB;*/
-/*  color: #47433F;*/
-/*  border-top: 1px solid #FFF;}*/
-
-  </style>
-</head>
-<body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-    <% content_for :search do %>
-  <div class="large-8 small-9 columns">
-  <%= search_form_for @search do |f| %>
-    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Content title" %>
-  </div>
-    <div class="large-4 small-3 columns">
-      <%= f.submit "Search", class: "radius-right button" %>
+       <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+        <span class="sr-only">Bootstrap</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Categories</a>
     </div>
-  <% end %>
+    <div id="gnavi" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <% @category.each do |category| %>
+          <li> <%= link_to category.name, category_path(category.id) %></li>
 <% end %>
-<div class="row">
-<div class="col-sm-12" style="background-color:lavender;">
        
-            <h3>Browse</h3>
-           
-              <% @category.each do |category| %>
-
-     
-           <li><a href="#"> <%= link_to category.name, category_path(category.id) %></a></li>
-<% end %>
-          </div></div>
-<<<<<<< HEAD
-=======
-
-
-<ul class="navbar-nav"><li>
-<!--<% if @robs.blank? %>-->
-<!--  <h4>No such thing in our database.  <%= params[:search] %>.</h4>-->
-<!--<% end %>-->
-
-<% for rob in @robs %>
-        <div class='task'>
-            <strong> <%= rob.title %> </strong>
-        </div>
-       
-      <% end %>
-
-
-
-
-
-</li></ul>
-<div class="row">
- <div class="col-sm-12" style="background-color:lightgray;">
-<nav role="sub">
-    <ul>
-              <% @category.each do |category| %>
-           <li><a href="#"> <%= link_to category.name, category_path(category.id) %></a></li>
-<% end %>
-
-           </ul>
+      </ul>
+    </div>
+  </div>
 </nav>
-<style>
-  nav[role="sub"] ul li {
-    background-color:#eee;
-     width:100px;
-    display:inline-block;
-    text-align: center;
-     margin:5px;
-    padding:5px;
-}
 
-</style>
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+
         
+   
+<h4>Technology News Today</h4>
+     
+  <% @robs.each do |rob| %>
+  
+  <div class="contents"><ul class="row"> <li class="col-sm-6 col-md-offset-1 col-md-8">
+    <%= image_tag rob.image_url(:thumb) %><br>
+       <%= link_to rob.title, rob_path(rob.id) %><br></li></ul>
+    <% if current_user.id == rob.user_id %>
+ <li class="col-sm-6 col-md-5">  <%= link_to 'Post News', new_rob_path %></li></ul>
+    <% end %>
+    </div>
+<% end %>
+      
+   
+
+
+          
+</nav>
+
  <div class="slideshow-container">
 <section>
   <img class="mySlides" <%= image_tag "13.jpg", width:'80%' %>>
@@ -364,44 +57,12 @@ table
    <img class="mySlides" <%= image_tag "56.jpg", width:'80%' %>>
    <img class="mySlides" <%= image_tag "60.jpg", width:'80%' %>>
     <img class="mySlides" <%= image_tag "84.jpg", width:'80%' %>>
-<style>
-  mySlides{  margin-left: auto;
-    margin-right: auto;}
-</style>
+
     </section></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    </div></div>
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-  <div class="row">
- <div class="col-sm-4" style="background-color:lightgray;">
-  
-    <p>Top Selling</p>
-    <!--<img src="Capture.png" alt="Random Name" style="width:100%">-->
-    <%= image_tag "Capture.png", width:'80%' %>
-    <p><a href="https://www.google.rw/search?biw=1366&bih=662&tbm=isch&sa=1&ei=GzcUW8HqHsiUgAbx3ragDw&q=top+technology+devices&oq=top+technology+devices&gs_l=img.3...4469.16093.0.16302.22.21.0.1.1.0.525.1942.3-3j1j
-    1.5.0....0...1c.1.64.img..16.6.1946...0j0i67k1j0i30k1j0i5i30k1j0i8i30k1.0.N9Py3LO6iSY">Read more</a></p></p>
-  </div>
- <div class="col-sm-4" style="background-color:lightcyan;">
-    <p>Lst Week Top Sold</p>
-    <!--<img src="Capture2.png" alt="Random Name" style="width:100%">-->
-    <%= image_tag "Capture2.png", width:'80%' %>
-    <p><a href="https://www.google.rw/search?biw=1366&bih=662&tbm=isch&sa=1&ei=GzcUW8HqHsiUgAbx3ragDw&q=top+technology+devices&oq=top+technology+devices&gs_l=img.3...4469.16093.0.16302.22.21.0.1.1.0.525.1942.
-    3-3j1j1.5.0....0...1c.1.64.img..16.6.1946...0j0i67k1j0i30k1j0i5i30k1j0i8i30k1.0.N9Py3LO6iSY">Read more</a></p></p>
-  </div>
-   <div class="col-sm-4" style="background-color:lightcyan;">
-    <p>Trending</p>
-    <!--<img src="Capture3.png" alt="Random Name" style="width:100%">-->
-    <%= image_tag "Capture3.png", width:'80%' %>
-    <p><a href="https://www.google.rw/search?biw=1366&bih=662&tbm=isch&sa=1&ei=GzcUW8HqHsiUgAbx3ragDw&q=top+technology+devices&oq=top+technology+devices&gs_l=img.3...4469.16093.0.16302.22.21.0.1.1.0.525.1942.
-    3-3j1j1.5.0....0...1c.1.64.img..16.6.1946...0j0i67k1j0i30k1j0i5i30k1j0i8i30k1.0.N9Py3LO6iSY">Read more</a></p>.</p>
+
  
-  </div>
-  </div>
-</div>
+  
+   
 
 
 <script>
@@ -422,124 +83,9 @@ function carousel() {
 }
 </script>
 
-</script>
- 
-    <div class="row">
-	 <div class="col-sm-4" style="background-color:lavender;">
-            
-            <h3>Latest News</h3>
-            <h4>New Website Launched</h4>
-            <h5>February 1st, 2014</h5>
-            <p>2014 sees the redesign of our website. Take a look around and 
-            let us know what you think.<br /><a href="https://www.w3schools.com/howto/howto_website.asp">Read more</a></p>
-             <h4>CSS Property</h4>
-             <p>      Sometimes it is not the text that needs to be centered, 
-             but the block as a whole. Or, phrased differently: we want the left
-             and right margin to be equal. The way to do that is to set the margins
-             to 'auto'. This is normally used with a block of fixed width, 
-             because if the block itself is flexible, it will simply take up all the 
-             available width. Here is an example<br /><a href="https://www.w3.org/Style/Examples/007/center.en.html">Read more</a></p>
-              <h4>How To Center Anything With CSS</h4>
-              <p> Recently, we took a dive into the very core concepts
-              behind CSS layout and explored the differences between absolute 
-              and relative positioning. We’re going to follow that up with another CSS layout talk,
-              this time based around a fundamental question that almost 
-              every new developer asks: how do you center something<br /><a href="https://mayvendev.com/blog/how-to-center-anything-with-css">Read more</a></p>
-          </div>
-          <div class="col-sm-8" style="background-color:lavender;">
-       
-            <h3>Tech Life</h3>
-           
-             <h1>A Very Simple HTML/CSS Navbar by Dan on CodePen</h1>
-           <a>Thanks for downloading this template from HTML5WebTemplates.co.uk
-
-I hope that it suits your needs.
-
-If you have any questions please feel free to e-mail me at contact@html5webtemplates.co.uk
-
-Best regards,
-
-If you wish to remove the footer link
-<br /><a href="ttp://www.html5webtemplates.co.uk/">Read more</a></p>
- 
-</a>
-
-          </div>
+    
         
-      </div>
-       <div class="row">
-     <div class="col-sm-4" style="background-color:lavenderblush;">
-        <!-- insert the page content here -->
-        <h4>Technology News Today</h4>
-        
-  <% @robs.each do |rob| %>
-  <li>
-    <%= image_tag rob.image_url(:thumb) %><br>
-       <%= link_to rob.title, rob_path(rob.id) %></li>
-    <% if current_user.id == rob.user_id %>
-  <li >   <%= link_to 'Post News', new_rob_path %> </li>
-   <% end %>
-<% end %>
-       
-         </div>
-   
-     <div class="col-sm-8" style="background-color:lightgray;">
-      
-            <h1>POPULAR FOR GAMERS</h1>
-            <p><strong>Author:</strong> Bill Clinton, <strong>Published:</strong> Yesterday</p>
-              <div>
-                 <%= image_tag "Capturee.png", width:'50%' %><br>
-                <span>Image source: The WEB</span>
-            </div>
 
-            <p>
-                Acer Predator is a gamer-focused brand and line of computer
-                hardware owned by Acer. In 2008, Acer introduced itself in the gaming computer market with
-                a line of desktop computers: the Acer Aspire Predator series, later renamed as Acer Predator. Wikipedia</p><br>
-            <p>US$1,529.10 to US$1,699.00
-Stay on the attack with the unrelenting power of the Acer Predator 15.
-It's virtual reality-ready and tackles the most intense
-games with next-gen NVIDIA GeForce .<br /><a href="https://www.microsoft.com/en-us/p/acer-predator-15-g9-593-73fk-signature-edition-gaming-laptop/8v498kpjlsjh">Read more</a></p>
+  </div>
 
-<h1>GAMERS NEXUS</h1>
-            <p><strong>Author:</strong> Donald Obama, <strong>Published:</strong> Yesterday</p>
-              <div>
-                 <%= image_tag "Captur.png", width:'50%' %><br>
-                <span>Image source: The ROBERT</span>
-            </div>
 
-            <p>
-               At EVGA’s headquarters in New Taipei City, Taiwan, GamersNexus received a hands-on overview of the company’s new semi-closed loop liquid nitrogen cooling setup. The setup was created by K|NGP|N and TiN, both of whom work in the Taiwan office, to increase overclocking efficiency and reduce LN2 usage to only necessary quantities. Typically, extreme overclocking involves manual pouring of liquid nitrogen (LN2) from a thermos, which the overclocker can either manually refill from the LN2 tanks or can refill from the exhaust. With this new system, K|NGP|N is able to circulate LN2 based upon software input of desired temperatures, with used LN2 getting pushed through a series of flexible steel tubing and out of an exit manifold. The result yields somewhat reusable LN2 and eliminates the hands-on thermos pouring element of XOCing, allowing overclockers to focus on the result and tuning. Theoretically, you could run off of large LN2 tanks (~180L) 
-               at conservative temperatures for weeks on end, then swap tanks and use the collected “runoff.”</p><br>
-            <p>US$1,529.10 to US$1,699.00
-Stay on the attack with the unrelenting power of the Acer Predator 15.
-It's virtual reality-ready and tackles the most intense
-games with next-gen NVIDIA GeForce .<br /><a href="https://www.gamersnexus.net/">Read more</a></p>
-       
-    <style type="text/css">
-    /*body { font-family: sans-serif; }*/
-    h1 {
-        font-family: serif;
-        margin-bottom: 0;
-    }
-    article {
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-     .image-wrapper {
-        width: 200px;
-        float: left;
-        padding-right: 25px;
-        padding-bottom: 10px;
-    }
-    .image-wrapper img {
-        width: 100%;
-    }
-</style>
-   </div></div>
-
-  
-
-</body>
-</html>

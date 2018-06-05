@@ -1,57 +1,24 @@
+<div class="col-sm-8 text-left"> 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-<ul><br><br>
-  <% comments.each do |comment| %>
-    <% unless comment.id.nil? %>
-    
-     <!--<%= comment.name %>-->
-      <%= comment.user.name %>
-     Comment:<%= @comment.name %> 
-     
-      <li>
-<<<<<<< HEAD
-=======
-
+  
   <% comments.each do |comment| %>
     <% unless comment.id.nil? %>
     
     <p> <!--<%= comment.name %>-->
       <%= comment.user.name %>
-     Comment:<%= @comment.name %> </p>
+     Comment:<%= @comment.name %> <br>
      
       <p>
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
         <%= comment.content %>
        <% if comment.user == current_user  %>
         <%= link_to "Del", [comment.rob, comment], :confirm => 'Are you sure?', :method => :delete %> 
            <% end %>
      </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-      </li><br><br>
      
-    
-     
-     
-     
-     
-    <% end %>
-  <% end %>
-</ul>
-<<<<<<< HEAD
-=======
+ 
     <% end %>
   <% end %>
 
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
 
+</div>

@@ -6,18 +6,9 @@ class RobsController < ApplicationController
  
   
   def index
-    @robs = Rob.all
-    @search = Rob.search(params[:q])
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-    @robs = @search.result
-    @favorite = Favorite.all
-    @comment = Comment.all
-    @category = Category.all
-<<<<<<< HEAD
-=======
+    # @robs = Rob.all
+    # @search = Rob.search(params[:q])
+
     # @robs = @search.result
     @favorite = Favorite.all
     @comment = Comment.all
@@ -29,14 +20,11 @@ class RobsController < ApplicationController
     # @robs = Rob.all.order("created_at DESC")
     # end
      @robs = Rob.search(params[:term])
-     @robs = if params[:term]
-    Rob.where('Title LIKE ?', "%#{params[:term]}%")
-  else
-    Rob.all
-  end
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+     # @robs = if params[:term]
+     #   Rob.where('Title LIKE ?', "%#{params[:term]}%")
+     # else
+     #   Rob.all
+     # end
   end
 
   # Add
@@ -48,18 +36,17 @@ class RobsController < ApplicationController
       @rob = Rob.new(rob_params)
     else
      @rob = Rob.new    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    end
-=======
+
    end
->>>>>>> First commit
-=======
-    end
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+
+   end
+
+
+   
+
   # @robs = Rob.new
   # @robs.user_id = current_user.id
-  end
+ 
   
   def create
     @rob = Rob.new(rob_params)

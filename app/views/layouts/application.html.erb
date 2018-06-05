@@ -6,111 +6,84 @@
  
 
   <%= csrf_meta_tags %>
-
-   <body>
-   
-     <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light bg-light">
-      <div class="container">
-           <%=link_to image_tag("logo.png", width:'100px',height:'50px'), root_path,class:'navbar-brand'%>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-           
-          </li>
-       
-        </ul>
-        <ul class="navbar-nav">
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </li>
-        
-=======
->>>>>>> First commit
-=======
-        </li>
-        
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-          
-         <% if logged_in? %>  
-          
-            <li><a href=""><%= link_to "My Account Detail", user_path(current_user.id) %></a></li>
-            <li><a href=""><%= link_to " Home", robs_path %></li>
-            <li><a href=""><%= link_to "Logout", session_path(current_user.id), method: :delete %></a></li>
-            
-             
-             
-<<<<<<< HEAD
-<<<<<<< HEAD
-           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %></a></li>
-             
-=======
-           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %>
-           
-            
-           <%= form_tag(robs_path, method: :get) do %>
-  <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil %>
-         </a></li><br>
-             
-<% end %>
+ 
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+        background-color: #b0c4de;
+    }
     
->>>>>>> First commit
-=======
-           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %></a></li>
-             
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-         <% else %>
-            <li><a href=""><%= link_to "Sign up", new_user_path %></a></li>
-            <li><a href=""><%= link_to "Login", new_session_path %></a></li>
-         <% end %>
-         
-          <li>
-        </ul>
-       <style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-   
-}
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: auto}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+    background-color: #000000;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color:#556b2f;
+      color: white;
+      /*padding: 15px;*/
+      position:absolute;
+      bottom:0;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+  
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-     color: #00008b;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-/*li a:hover {*/
-/*    background-color: #111;*/
-/*}   */
-
-
-
-</style>
-      </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> <%=link_to image_tag("logo.png", width:'100px',height:'50px'), root_path,class:'navbar-brand'%></a>
     </div>
-</nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <%= yield(:search) %>
-=======
-<div class="contain">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+             <% if logged_in? %>  
+        <li><a href="#"><%= link_to "My Account Detail", user_path(current_user.id) %></a></li>
+        <li><a href="#"><li><a href=""><%= link_to " Home", robs_path %></li></a></li>
+        <li><a href="#"><%= link_to "Logout", session_path(current_user.id), method: :delete %></a></li>
+         
+   
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><%= image_tag current_user.image.url , class:'img-circle' %></a></li></ul>
+        <%= form_tag(robs_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] , class:'form-control' %>
+  <%= submit_tag 'Search', name: nil %>
+      
+        
+  <% end %>
+      
+      <% else %>
+    <li class="active"><a href="#"><%= link_to "Sign up", new_user_path %></a></li>
+    <li class="active"><a href="#"><%= link_to "Login", new_session_path %></a></li>
+    <% end %>
+    </div>
+   <div class="contain">
  
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">WHO WE ARE</a></li>
+    <li ><a data-toggle="tab" href="#home">WHO WE ARE</a></li>
     <li><a data-toggle="tab" href="#menu1">WHAT WE DO</a></li>
     <li><a data-toggle="tab" href="#menu2">TERMS AND CONDITIONS</a></li>
     <li><a data-toggle="tab" href="#menu3">CONTACT US</a></li>
@@ -139,14 +112,10 @@ li a {
       font-style: oblique;
       color: #fffacd;
       /* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
+
 
 /* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
+
 
 /* Style the tab content */
 .tabcontent {
@@ -156,7 +125,7 @@ li a {
     border-top: none;
 }
 .tab button {
-    background-color: inherit;
+   
     float: left;
     border: none;
     outline: none;
@@ -167,91 +136,69 @@ li a {
 }
     </style>
   </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      
+    </div>
+    <%= yield %>
+   
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+       <p>ADS</p>
+        <p>ADS</p>
+         <p>ADS</p>
+          <p>ADS</p>
+           <p>ADS</p>
+            <p>ADS</p>
+             <p>ADS</p>
+              <p>ADS</p>
+              <div class="well">
+        <p>ADS</p>
+        <p>ADS</p>
+        <p>ADS</p>
+        <p>ADS</p>
+        <p>ADS</p>
+      </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 
-  
->>>>>>> First commit
-=======
 
-    <%= yield(:search) %>
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-   <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-      <p class="notice"><%= notice %></p>
-       <p  class="alert"><%= alert %></p>
-      <% end %>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> First commit
-=======
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
-  
-       <%= yield %>
-<div class="row">
- <div class="col-sm-4" style="background-color:lightgray;"></div></div>
-   <div class="row">
-	 <div class="col-sm-4" style="background-color:lavender;"></div>
-	   <div class="col-sm-14" style="background-color:lavenderblush;"></div></div>
-  
-     
-<style>
 
-/*footer {*/
-/*     position: absolute;*/
-   
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*      min-height: 60px;*/
-/*    background-color:#2c3e50;*/
-/*    color: white;*/
-/*    text-align: center;*/
-/*    padding-top: 24px;*/
-    
-/*    }*/
-footer
-{ width: 100%;
-  font-family: 'trebuchet ms', sans-serif;
-  font-size: 100%;
-  height: 300px;
-  /*padding: 28px 0 5px 0;*/
-  text-align: center; 
-  background: #3B3939 url(footer.png) repeat-x;
-  color: #A8AA94;}
-
-footer p
-{ line-height: 1.7em;
-  padding: 0 0 10px 0;}
-
-footer a
-{ color: #A8AA94;
-  text-decoration: none;}
-
-footer a:hover
-{ color: #FFF;
-  text-decoration: none;}
-
-table {margin-bottom:200px;
-  
-}
-li{
-  padding-bottom:80px;
-}
-article { 
-    display: block;
-}
-
-</style>
- 
- <footer class="footer"><p> Copyright © 2018</p>
+<footer class="footer col-md-12"><p> Copyright © 2018</p>
 <h>Contact Us</h>
 <p>Email: nzeroberto@gmail.com</p>
 <p>Phone: +250787104291</p>
 
- <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a></p>
-    
-</footer>
+ </footer>
+
+
+
 
 
 </body>
