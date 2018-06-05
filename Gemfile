@@ -73,5 +73,6 @@ gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Google plugin
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 # Use ActiveRecord Sessions
-
+# gem 'therubyracer'
+ 
 
