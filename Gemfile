@@ -73,13 +73,5 @@ gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Google plugin
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 # Use ActiveRecord Sessions
-<<<<<<< HEAD
-<<<<<<< HEAD
-gem 'activerecord-session_store', '~> 1.0'
-=======
-gem 'activerecord-session_store', '~> 1.0'
 
->>>>>>> First commit
-=======
-gem 'activerecord-session_store', '~> 1.0'
->>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+
