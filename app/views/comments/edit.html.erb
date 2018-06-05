@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+   
+<h1>Editing My Comment</h1>
+
+<ul >
+   
+<div id="comments_area">
+  <!-- render for displaying posted comments list in a blog detail page -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, rob: @rob } %>
+  </div>
+
+  <!-- render for displaying comment entering field in a blog detail page -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, rob: @rob } %>
+<%= link_to 'Back', robs_path %>
+
+</ul>
+        
+   
+</div>
+
+</div>
+</body>
+</html>   

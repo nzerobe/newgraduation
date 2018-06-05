@@ -1,0 +1,26 @@
+<html>
+<body>
+ 
+<div class="row">
+ <div class="col-sm-12" style="background-color:lightgray;">
+  
+<p id="notice"><%= notice %></p>
+ News for <%= @category.name %>
+<p>
+  <strong>Name:</strong>
+  
+  <% @news.each do |new|%>
+    <%=image_tag(new.image_url, style:'width:250px;height:250px;')%><br>
+    <%=new.title%><br>
+    <%=new.content%><br>
+  <% end %>
+ 
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', robs_path %>
+
+</div>
+</div>
+</body>
+</html>  

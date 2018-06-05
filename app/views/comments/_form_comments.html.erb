@@ -1,0 +1,13 @@
+<%= form_for([@rob, @rob.comments.build], remote: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

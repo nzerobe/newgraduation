@@ -1,0 +1,4 @@
+$('#comment_<%= @comment.id %>').remove();
+$('body').on('ajax:success', '.delete-comment-button', function(event) {
+  $(event.original_target).closest('.single-comment').fadeOut();
+})

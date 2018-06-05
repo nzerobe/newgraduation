@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<body>
+ 
+  <div class="row">
+ <div class="col-sm-4" style="background-color:lightgray;">
+       
+
+<%= form_with(model: @robs, local: true) do |form| %>
+<div class="blog_title">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="blog_title">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <div class="field">
+  <%= form.label :image %>
+  <%= form.file_field :image, id: :feed_image %>
+  <%= form.hidden_field :image_cache %>
+</div>
+  <h2>Edit Contents</h2>
+
+  
+  <%= form.submit %>
+<% end %>
+
+</div></div>
+</body>
+</html>

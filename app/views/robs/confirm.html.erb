@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="row">
+<<<<<<< HEAD
+<<<<<<< HEAD
+ <div class="col-sm-4" style="background-color:lightgray;">> 
+=======
+ <div class="col-sm-12" style="background-color:lightgray;">> 
+>>>>>>> First commit
+=======
+ <div class="col-sm-4" style="background-color:lightgray;">> 
+>>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+     
+    <div class="table-responsive">
+
+
+      
+<h2>Comfirm</h2>
+
+<%= form_with(model: @rob, url: robs_path, local: true) do |form| %>
+     <%= form.hidden_field :title %>
+      <%= form.hidden_field :content %>
+      <%= form.hidden_field :category_id %>
+  <p>Title:<%= @rob.title %></p>
+  <p>Body:<%= @rob.content %></p>
+   <p>Body:<%= image_tag(@rob.image.url(:thumb)) %></p>
+   <%= hidden_field_tag :"cache[image]",@rob.image.cache_name%>
+  <%= form.submit  "submit" %>
+<% end %>
+
+<%= form_with(model: @rob, url: new_rob_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <%= form.hidden_field :image %>
+
+  <%= form.submit "Back", name: 'back' %>
+<% end %>
+
+
+
+    </div>
+     </div>
+</body>
+</html>

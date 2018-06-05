@@ -1,0 +1,22 @@
+ <article>
+        <div class="contents">
+            <ul class="row"> <li>
+<% @rob.comments.each do |comment| %>
+ <% unless comment.id.nil? %>
+ <p>
+<%= comment.name %> Wrote:<%= @comment.name %> </p></li>
+<li><p><%= comment.content %></p> 
+
+ </li>
+
+<li><p><%= link_to "Del", [comment.rob, comment], :confirm => 'Are you sure?', :method => :delete %></p> 
+
+ </li>
+            </ul>
+        </div>
+
+<hr>
+<% end %><% end %>
+</ul></li></div>
+
+</div></div>

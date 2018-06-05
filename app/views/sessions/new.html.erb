@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <div class="row">
+ <div class="col-sm-4" style="background-color:lightgray;">
+
+     
+<h1>Log in</h1>
+   
+             
+<%= form_with(scope: :session, url: sessions_path) do |f| %>
+
+  <%= f.label :email%>
+  <%= f.email_field :email ,class:'form-control'%>
+<br>
+  <%= f.label :password %>
+  <%= f.password_field :password ,class:'form-control'%>
+
+  <%= f.submit "Log in" ,class:'btn btn-primary'%>
+<% end %></div>
+<div class="col-sm-8" style="background-color:lavenderblush;">
+<h2>A GRASP OF HEADLINES</h2>
+
+  <!-- Full-width images with number and caption text -->
+  
+      
+     
+ 
+ <div class="slideshow-container">
+  <div class="mySlides fae">
+    <div class="numbertext">1 / 6</div>
+    <%=image_tag("14.jpg", width:'50%')%>
+    <div class="text">Embedded Computers</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+     <%=image_tag("22.jpg",width:'50%')%>
+    <div class="text">HD Games</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <%=image_tag("30.jpg",width:'50%')%>
+    <div class="text">Hardware</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <%=image_tag("56.jpg",width:'50%')%>
+    <div class="text">Tech Trends</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <%=image_tag("60.jpg",width:'50%')%>
+    <div class="text">Android</div>
+  </div>
+<div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <%=image_tag("55.jpg",width:'50%')%>
+    <div class="text">iOS</div>
+  </div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:left">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+</div> 
+ </div> 
+</body>
+</html>

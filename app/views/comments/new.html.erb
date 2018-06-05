@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="row">
+ <div class="col-sm-4" style="background-color:lightgray;">
+<h1>New Comment</h1>
+
+
+<div id="comments_area">
+  <!-- render for displaying posted comments list in a blog detail page -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, rob: @rob } %>
+  </div>
+
+  <!-- render for displaying comment entering field in a blog detail page -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, rob: @rob } %>
+
+  
+</div>
+</div>
+</body>
+</html> 

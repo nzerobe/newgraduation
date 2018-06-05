@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <div class="row">
+   <div class="col-sm-12" style="background-color:lavender;">
+   
+  
+       <h2>Contents Details </h2>
+           
+<% unless @robs.user_id == current_user.id %>
+  <% if @favorite.present? %>
+    <%= link_to 'Cancel favorites', favorite_path(@robs.id), method: :delete, class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to 'To favorite', favorites_path(rob_id: @robs.id), method: :post, class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+  <div class="blog-text">
+    <p><strong>Title</strong></p>
+    <p><%= @rob.title %></p>
+    <p><strong>Content</strong></p>
+    <p><%= @rob.content %></p>
+  </div>
+  <p>
+  
+  <strong>Image:</strong>
+  <%= image_tag @robs.image_url, style:'width:250px;height:250px;' %>
+  
+</p>
+  
+  <div id="comments_area">
+  <!-- render for displaying posted comments list in a blog detail page -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, rob: @rob } %>
+  </div>
+
+  <!-- render for displaying comment entering field in a blog detail page -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, rob: @rob } %>
+
+  
+
+<%= link_to 'Edit', edit_rob_path(@rob) %> |
+  <%= link_to 'Return', robs_path %>
+  
+  
+</div>
+</div>
+</body>
+</html>    
+    

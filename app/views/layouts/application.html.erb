@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+   <title>ICT</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ 
+
+  <%= csrf_meta_tags %>
+
+   <body>
+   
+     <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light bg-light">
+      <div class="container">
+           <%=link_to image_tag("logo.png", width:'100px',height:'50px'), root_path,class:'navbar-brand'%>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+           
+          </li>
+       
+        </ul>
+        <ul class="navbar-nav">
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </li>
+        
+=======
+>>>>>>> First commit
+=======
+        </li>
+        
+>>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+          
+         <% if logged_in? %>  
+          
+            <li><a href=""><%= link_to "My Account Detail", user_path(current_user.id) %></a></li>
+            <li><a href=""><%= link_to " Home", robs_path %></li>
+            <li><a href=""><%= link_to "Logout", session_path(current_user.id), method: :delete %></a></li>
+            
+             
+             
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %></a></li>
+             
+=======
+           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %>
+           
+            
+           <%= form_tag(robs_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+         </a></li><br>
+             
+<% end %>
+    
+>>>>>>> First commit
+=======
+           <li> <a><%= image_tag current_user.image.url , class:'img-circle' %></a></li>
+             
+>>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+         <% else %>
+            <li><a href=""><%= link_to "Sign up", new_user_path %></a></li>
+            <li><a href=""><%= link_to "Login", new_session_path %></a></li>
+         <% end %>
+         
+          <li>
+        </ul>
+       <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+     color: #00008b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+/*li a:hover {*/
+/*    background-color: #111;*/
+/*}   */
+
+
+
+</style>
+      </div>
+    </div>
+</nav>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <%= yield(:search) %>
+=======
+<div class="contain">
+ 
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">WHO WE ARE</a></li>
+    <li><a data-toggle="tab" href="#menu1">WHAT WE DO</a></li>
+    <li><a data-toggle="tab" href="#menu2">TERMS AND CONDITIONS</a></li>
+    <li><a data-toggle="tab" href="#menu3">CONTACT US</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+     
+      <p1> A private Technology website news firm.</p1>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      
+      <p1> Teach people Technology and trends </p1>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      
+      <p1>Do not make other uncomfortable with your comments.</p1>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      
+      <p1> Look At the footer for Contact Details</p1>
+    </div>
+    <style>
+      p1{font-family: monospace;
+      font-size:1.5rem;
+      font-style: oblique;
+      color: #fffacd;
+      /* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+    </style>
+  </div>
+</div>
+
+  
+>>>>>>> First commit
+=======
+
+    <%= yield(:search) %>
+>>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+   <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+      <p class="notice"><%= notice %></p>
+       <p  class="alert"><%= alert %></p>
+      <% end %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> First commit
+=======
+>>>>>>> 88c55615b3830e968aa1c697c60ba212a4bc9ecb
+  
+       <%= yield %>
+<div class="row">
+ <div class="col-sm-4" style="background-color:lightgray;"></div></div>
+   <div class="row">
+	 <div class="col-sm-4" style="background-color:lavender;"></div>
+	   <div class="col-sm-14" style="background-color:lavenderblush;"></div></div>
+  
+     
+<style>
+
+/*footer {*/
+/*     position: absolute;*/
+   
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*      min-height: 60px;*/
+/*    background-color:#2c3e50;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding-top: 24px;*/
+    
+/*    }*/
+footer
+{ width: 100%;
+  font-family: 'trebuchet ms', sans-serif;
+  font-size: 100%;
+  height: 300px;
+  /*padding: 28px 0 5px 0;*/
+  text-align: center; 
+  background: #3B3939 url(footer.png) repeat-x;
+  color: #A8AA94;}
+
+footer p
+{ line-height: 1.7em;
+  padding: 0 0 10px 0;}
+
+footer a
+{ color: #A8AA94;
+  text-decoration: none;}
+
+footer a:hover
+{ color: #FFF;
+  text-decoration: none;}
+
+table {margin-bottom:200px;
+  
+}
+li{
+  padding-bottom:80px;
+}
+article { 
+    display: block;
+}
+
+</style>
+ 
+ <footer class="footer"><p> Copyright © 2018</p>
+<h>Contact Us</h>
+<p>Email: nzeroberto@gmail.com</p>
+<p>Phone: +250787104291</p>
+
+ <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a></p>
+    
+</footer>
+
+
+</body>
+ 
+</html>

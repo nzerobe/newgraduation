@@ -1,0 +1,44 @@
+
+<%= form_with(model: @rob, local: true ,url: choose_new_or_edit ) do |form| %>
+  <% if @rob.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @rob.errors.count %>errors occurred.</h2>
+      <ul>
+
+      <% @rob.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="rob_category" style="width:400px;margin-left: 411px;">
+  
+    <%= form.select(:category_id,style:'width: 400px;') do %>
+        <% @category.each do |l| %>
+          <%= content_tag(:option, l.name, value: l.id) %>
+        <% end %>
+    <% end %>
+  </div>
+  
+
+  <div class="rob_title">
+    <%= form.label :title %>
+    <%= form.text_field :title, class:'form-control' %>
+  </div>
+  <div class="rob_title">
+    <%= form.label :content %>
+    <%= form.text_field :content, class:'form-control' %>
+  </div>
+  <div class="rob_title">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :rob_image %>
+    <%= form.hidden_field :image_cache %>
+  </div>
+  
+  <%= form.submit %>
+<% end %>
+
+
+
+<%= link_to "Return to List of News screen", robs_path %>

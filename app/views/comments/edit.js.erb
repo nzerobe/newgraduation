@@ -1,0 +1,4 @@
+$('#comment_<%= @comment.id %>').edit();
+$('body').on('ajax:success', '.edit-comment-button', function(event) {
+  $(event.original_target).closest('.single-comment').fadeOut();
+})
