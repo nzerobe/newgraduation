@@ -7,7 +7,6 @@ class User < ApplicationRecord
                 
  validates :password, length: { minimum: 6 }
  has_secure_password
-   # validates :image, presence: true
   #belongs_to :company
   has_many :favorites, dependent: :destroy
   has_many :favorite_robs, through: :favorites, source: :rob
