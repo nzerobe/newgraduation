@@ -5,9 +5,9 @@
    <%= link_to "Edit My Account", edit_user_path %>
     <% if logged_in? && current_user.admin %>
      <%= link_to 'Post News', new_rob_path%>
-   <% end %>
+  
      <%= link_to 'News Category', new_category_path%>
-
+ <% end %>
     
 <h1><%= @user.name %>'s page</h1>
 
