@@ -3,7 +3,9 @@
  <% user = current_user %>
   
    <%= link_to "Edit My Account", edit_user_path %>
-   <%= link_to 'Post News', new_rob_path%>
+   <% if current_user.admin %>
+     <%= link_to 'Post News', new_rob_path%>
+   <% end %>
      <%= link_to 'News Category', new_category_path%>
 
     

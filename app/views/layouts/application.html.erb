@@ -87,6 +87,11 @@
     <li><a data-toggle="tab" href="#menu1">WHAT WE DO</a></li>
     <li><a data-toggle="tab" href="#menu2">TERMS AND CONDITIONS</a></li>
     <li><a data-toggle="tab" href="#menu3">CONTACT US</a></li>
+    <li>
+      <% if logged_in? && current_user.admin %>
+             <%= link_to 'Post News', new_rob_path%>
+      <% end %>
+    </li>
   </ul>
 
   <div class="tab-content">
@@ -141,21 +146,61 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+      <div class="well">
+        <p>Technology</p>
+        <p>Is</p>
+        <div class="well">
+        <p>Evething.</p>
+        <p>Isn't it?</p>
+        </div>
+        </div>
+      <p>Link</p>
+      <p>Link</p>
+      <p>Link</p>
+      <p>Link</a></p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <div class="well">
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+        </div>
+       <p>Link</p>
+        <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+      <div class="well">
+        <p>PUB</p>
+        <p>PUB</p>
+        </div>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <div class="well">
+        <p>PUB</p>
+        <p>PUB</p>
+        </div>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
+       <p>Link</p>
       
     </div>
     <%= yield %>
@@ -182,6 +227,31 @@
         <p>ADS</p>
         <p>ADS</p>
       </div>
+      <div class="well">
+        <p>PUB</p>
+        <p>PUB</p>
+        </div>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+          <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+          <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+        <p>PUB</p>
+      
       </div>
       
     </div>

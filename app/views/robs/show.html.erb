@@ -34,8 +34,9 @@
   <%= render partial: 'comments/form', locals: { comment: @comment, rob: @rob } %>
 
   
-
+ <% if current_user.admin %>
 <%= link_to 'Edit', edit_rob_path(@rob) %> |
+<% end %>
   <%= link_to 'Return', robs_path %>
   
   

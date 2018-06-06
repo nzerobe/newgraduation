@@ -36,7 +36,7 @@
     <%= image_tag rob.image_url(:thumb) %><br>
        <%= link_to rob.title, rob_path(rob.id) %><br></li></ul>
     <% if current_user.id == rob.user_id %>
- <li class="col-sm-6 col-md-5">  <%= link_to 'Post News', new_rob_path %></li></ul>
+      
     <% end %>
     </div>
 <% end %>
